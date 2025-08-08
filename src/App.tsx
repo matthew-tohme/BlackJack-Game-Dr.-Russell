@@ -56,7 +56,7 @@ export default function App() {
       <header className="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-2xl bg-sky-500/20 border border-sky-400/30 shadow-glow grid place-items-center text-sky-300 font-bold">BJ</div>
-          <h1 className="text-xl md:text-2xl font-semibold tracking-tight">Blackjack Classic</h1>
+          <h1 className="text-xl md:text-2xl font-semibold tracking-tight">Matthew's Blackjack</h1>
         </div>
       </header>
 
