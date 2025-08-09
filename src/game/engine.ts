@@ -62,8 +62,13 @@ export function deal(state: GameState, n: number, to: 'player' | 'dealer') {
   for (let i = 0; i < n; i++) {
     const card = state.deck.pop()
     if (!card) return
-    if (to === 'player') state.player.cards.push(card)
-    else state.dealer.cards.push(card)
+    if (to === 'player') {
+      const next = state.player.cards.concat(card)
+      state.player = { cards: next }
+    } else {
+      const next = state.dealer.cards.concat(card)
+      state.dealer = { cards: next }
+    }
   }
 }
 
