@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { useState } from 'react'
 import Bank from './components/Bank'
 import Hand from './components/Hand'
 import { createInitialState, startRound, deal, dealerPlay, handValue, GameState } from './game/engine'
@@ -6,8 +6,8 @@ import { createInitialState, startRound, deal, dealerPlay, handValue, GameState 
 export default function App() {
   const [state, setState] = useState<GameState>(() => createInitialState())
 
-  const pv = useMemo(() => handValue(state.player).total, [state.player])
-  const dv = useMemo(() => handValue(state.dealer).total, [state.dealer])
+  const pv = handValue(state.player).total
+const dv = handValue(state.dealer).total
 
   function start() {
     if (state.bet < 1 || state.bet > state.bank) return
